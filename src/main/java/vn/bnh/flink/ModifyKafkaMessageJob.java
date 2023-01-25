@@ -20,7 +20,8 @@ public class ModifyKafkaMessageJob {
         ParameterTool parameters = ParameterTool.fromArgs(args);
         String inputTopic = parameters.get("inputTopic", "transactions");
         String outputTopic = parameters.get("outputTopic", "fraud");
-        String kafkaHost = parameters.get("kafka_host", "kafka:9092");
+        String kafkaHost = parameters.get("broker", "kafka:9092");
+        String jobName = parameters.get("jobName", "Sample Kafka Stream Job");
         // create execution environment
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
@@ -45,6 +46,6 @@ public class ModifyKafkaMessageJob {
         streamSource.print();
         SingleOutputStreamOperator<String> outputStream = streamSource.map((MapFunction<String, String>) value -> "modified value:" + value);
         outputStream.sinkTo(sink);
-        env.execute();
+        env.execute(jobName);
     }
 }

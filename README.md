@@ -15,10 +15,22 @@ docker-compose up -d
 mvn clean compile assembly:single
 ```
 
-## Deploy Job
+## Deploy Jar
 Using GUI at http://localhost:8081
 
+at tab `Submit New Job` -> `Add New`
 # Use
+## Submit New Job
+Using GUI at http://localhost:8081
+
+at tab `Submit New Job` -> click on Jar Name -> `Submit`
+
+override the job's default ENV values using `Program Arguments`
+
+specify ENV key and value as you would when running a jar file from terminal:
+
+`--${ENV_KEY}=${ENV_VALUE}`
+
 ## Publish Messages to Source Topic
 ```bash 
 echo "hello there" | kcat -b localhost:9092 -P -t transactions -H "header1=header value" -H "nullheader" -H "emptyheader=" -H "header1=duplicateIsOk"
