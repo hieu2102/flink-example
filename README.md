@@ -29,7 +29,7 @@ override the job's default ENV values using `Program Arguments`
 
 specify ENV key and value as you would when running a jar file from terminal:
 
-`--${ENV_KEY}=${ENV_VALUE}`
+`--${ENV_KEY1} ${ENV_VALUE1} --${ENV_KEY2} ${ENV_VALUE2}`
 
 ## Publish Messages to Source Topic
 ```bash 
