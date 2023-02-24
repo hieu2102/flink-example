@@ -46,7 +46,7 @@ specify ENV key and value as you would when running a jar file from terminal:
 ## Publish Messages to Source Topic
 
 ```bash 
-echo "hello there" | kcat -b localhost:9092 -P -t transactions -H "header1=header value" -H "nullheader" -H "emptyheader=" -H "header1=duplicateIsOk"
+echo "hello there" | kcat -b broker.bnh.vn:9092 -P -t flink-in -H "header1=header value" -H "nullheader" -H "emptyheader=" -H "header1=duplicateIsOk"
 echo "general Kenobi" | kcat -b localhost:9092 -P -t transactions -H "header1=header value" -H "nullheader" -H "emptyheader=" -H "header1=duplicateIsOk
 ```
 
