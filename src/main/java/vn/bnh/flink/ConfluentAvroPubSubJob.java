@@ -38,7 +38,7 @@ public class ConfluentAvroPubSubJob {
         ParameterTool parameters = ParameterTool.fromArgs(args);
         INPUT_TOPIC = parameters.get("inputTopic", "flink-in");
         OUTPUT_TOPIC = parameters.get("outputTopic", "flink-out");
-        KAFKA_HOST = parameters.get("broker", "broker.bnh.vn:9092");
+        KAFKA_HOST = parameters.get("broker", "broker:9092");
     }
 
     public static void executeJob() throws Exception {
