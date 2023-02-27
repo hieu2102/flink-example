@@ -1,0 +1,21 @@
+
+m
+java:S1104"WMake INPUT_TOPIC a static final constant or non-public and provide accessors if needed.(©ìÊ«
+n
+java:S1104"XMake OUTPUT_TOPIC a static final constant or non-public and provide accessors if needed.(³ØÚ€
+G
+java:S1444"1Make this "public static INPUT_TOPIC" field final(©ìÊ«
+H
+java:S1444"2Make this "public static OUTPUT_TOPIC" field final(³ØÚ€
+l
+java:S3008"VRename this field "INPUT_TOPIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ìÊ«
+m
+java:S3008"WRename this field "OUTPUT_TOPIC" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ØÚ€
+k
+java:S3008 "URename this field "KAFKA_HOST" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤Ç„œ
+y
+java:S3008!"^Rename this field "SCHEMA_REGISTRY_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÞÄÁíýÿÿÿÿ
+k
+java:S3008#"VRename this field "SCHEMA_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ýà¹`
+t
+java:S1128"RRemove this unused import 'org.apache.flink.formats.avro.AvroSerializationSchema'.(¼ˆ«˜þÿÿÿÿ8È‹Àšè0

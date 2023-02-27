@@ -56,9 +56,6 @@ public class ConfluentAvroPubSubJob {
         return schemaParser.parse(schemaRegistryClient.getLatestSchemaMetadata(SCHEMA_NAME).getSchema());
     }
 
-    public static AvroSerializationSchema getSerializationSchema() throws RestClientException, IOException {
-        return AvroSerializationSchema.forGeneric(getSchema());
-    }
 
     public static KafkaSource initSource() {
         return KafkaSource.<String>builder().setBootstrapServers(KAFKA_HOST).setTopics(INPUT_TOPIC).setDeserializer(KafkaRecordDeserializationSchema.valueOnly(StringDeserializer.class)).build();
